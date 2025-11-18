@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { VideoUploader } from './components/VideoUploader';
 import { VideoPreview } from './components/VideoPreview';
 import { ConversionPanel } from './components/ConversionPanel';

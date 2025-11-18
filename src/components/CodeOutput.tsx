@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { generateHTML5Code } from '../utils/converter';
 import styles from './CodeOutput.module.css';
 

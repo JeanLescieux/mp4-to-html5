@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react';
-import { isValidVideoFile, isValidFileSize, formatFileSize } from '../utils/sanitize';
+import { useCallback, useState } from 'react';
+import { isValidVideoFile, isValidFileSize } from '../utils/sanitize';
 import type { VideoFile } from '../types';
 import styles from './VideoUploader.module.css';
 

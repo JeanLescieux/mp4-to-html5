@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { ConversionOptions } from '../types';
 import styles from './ConversionPanel.module.css';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { formatFileSize } from '../utils/sanitize';
 import type { VideoFile } from '../types';
 import styles from './VideoPreview.module.css';

@@ -22,7 +22,7 @@ export async function initFFmpeg(
   });
 
   // Setup progress reporting
-  ffmpegInstance.on('progress', ({ progress, time }) => {
+  ffmpegInstance.on('progress', ({ progress }) => {
     const percentage = Math.round(progress * 100);
     onProgress?.(percentage, `Conversion en cours: ${percentage}%`);
   });
@@ -79,7 +79,7 @@ export async function convertVideo(
     
     // Create blob and URL
     const mimeType = options.format === 'webm' ? 'video/webm' : 'video/mp4';
-    const blob = new Blob([data], { type: mimeType });
+    const blob = new Blob([data as BlobPart], { type: mimeType });
     const url = URL.createObjectURL(blob);
     
     // Cleanup
@@ -145,7 +145,7 @@ function buildFFmpegArgs(
  * Generate HTML5 video embed code
  */
 export function generateHTML5Code(
-  videoUrl: string,
+  _videoUrl: string,
   filename: string,
   options: {
     autoplay?: boolean;
